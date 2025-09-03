@@ -50,6 +50,11 @@ button:active {
   background-color: white;
 }
 
+input:focus,
+button:focus {
+  outline: 2px solid rgb(0, 0, 0);
+}
+
 /* Darkmode Automatic */
 
 @media (prefers-color-scheme: dark) {
@@ -58,7 +63,7 @@ button:active {
     color: white;
   }
   label {
-    color: #fcfcfc;
+    color: white;
   }
   input {
     background-color: #666;
@@ -68,6 +73,17 @@ button:active {
     color: #ccc;
   }
   button {
-    background-color: #fcfcfc;
+    background-color: #666;
+  }
+  input:focus,
+  button:focus {
+    outline: 2px solid rgb(255, 255, 255);
+  }
+  button > * {
+    color: white;
+  }
+  button > svg {
+    fill: white;
+    stroke: white;
   }
 }
