@@ -65,7 +65,7 @@ export function EvaluatePostFix(postFixArray) {
 }
 
 function GetPrecedence(op) {
-  precedences = [
+  const precedences = [
     {
       operator: "+",
       precedence: 1,
