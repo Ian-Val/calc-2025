@@ -15,15 +15,19 @@
 
   <body>
     <main class="body-container">
-      <label for="expression-input">Enter your expression</label>
+      <!-- <label for="expression-input">Enter your expression</label> -->
       <input
-        aria-label="calculator input"
+        aria-label="enter your expression"
         id="expression-input"
         placeholder="9+10"
         class="display"
       />
       <!-- <div id="expression-display" class="display">Expression</div> -->
-      <button id="copy-btn" class="display copy-btn">
+      <button
+        id="copy-btn"
+        class="display copy-btn"
+        aria-label="copy result to clipboard."
+      >
         <span id="result-display"></span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

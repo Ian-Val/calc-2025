@@ -16,7 +16,7 @@ ParseExpression(expressionInput.value);
 
 function ParseExpression(inputString) {
   tokens = cleanString(inputString);
-  expressionInput.value = tokens.split(/\s+/);
+  // expressionInput.value = tokens.split(/,\s+/);
   tokensPostFix = InfixToPostfix(tokens);
   solution = Number(EvaluatePostFix(tokensPostFix));
 
@@ -35,7 +35,7 @@ function cleanString(input) {
   return input.replace(/([+\-*/^()])/g, " $1 ").trim();
 }
 
-function EvaluatePostFix(postFixArray = ["1", "2", "+"]) {
+function EvaluatePostFix(postFixArray) {
   const stack = [];
   for (let token of postFixArray) {
     if (!isNaN(token)) {
@@ -97,7 +97,6 @@ function InfixToPostfix(expression = "14 + 1") {
   const output = [];
   const stack = [];
   const tokens = expression.split(/\s+/);
-  console.log(`Tokens:   ${tokens.join(", ")}`);
   for (let token of tokens) {
     if (Number(token)) {
       output.push(token);
