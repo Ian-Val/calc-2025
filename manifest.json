@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Calc 2000",
-  "version": "1.0.1",
+  "name": "Calc 2025",
+  "version": "1.0.2",
   "description": "Simple, fast and powerful calculator",
-  "author": "Pawan Kolhe",
+  "author": "Pawan Kolhe & Ian Valeta",
   "offline_enabled": true,
   "icons": {
     "16": "icon_16.png",
