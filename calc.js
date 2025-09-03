@@ -1,5 +1,4 @@
 const expressionInput = document.querySelector("#expression-input");
-// const expressionDisplay = document.querySelector("#expression-display");
 const resultDisplay = document.querySelector("#result-display");
 const copyBtn = document.querySelector("#copy-btn");
 let tokens = "";
@@ -16,19 +15,13 @@ ParseExpression(expressionInput.value);
 
 function ParseExpression(inputString) {
   tokens = cleanString(inputString);
-  // expressionInput.value = tokens.split(/,\s+/);
   tokensPostFix = InfixToPostfix(tokens);
   solution = Number(EvaluatePostFix(tokensPostFix));
-
-  // expressionDisplay.textContent = expressionDisplay.textContent.trim()
-  //   ? ""
-  //   : `${cleanString(inputString)} = `;
   resultDisplay.textContent =
     expressionInput.value.trim() === "" || isNaN(solution) ? "" : `${solution}`;
   if (solution === 0) {
     resultDisplay.textContent = "0";
   }
-  // return solution;
 }
 
 function cleanString(input) {
@@ -93,7 +86,7 @@ function GetPrecedence(op) {
   return match ? match.precedence : null;
 }
 
-function InfixToPostfix(expression = "14 + 1") {
+function InfixToPostfix(expression) {
   const output = [];
   const stack = [];
   const tokens = expression.split(/\s+/);

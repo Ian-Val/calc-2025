@@ -1,26 +1,23 @@
+/* Layout */
+
 * {
   box-sizing: border-box;
-  /* background-color: rgba(255, 0, 0, 0.01);
-  border: rgba(255, 0, 0, 0.4) 1px dotted; */
   color: #111;
 }
 
 body {
+  width: 200px;
   margin: 0;
   padding: 0;
   font-family: monospace, sans-serif;
 }
+
 .body-container {
   margin: 10px;
 }
 
-label {
-  font-size: 0.9rem;
-  font-weight: bold;
-  /* letter-spacing: 1px; */
-}
-
-input {
+input,
+button {
   font-size: 1rem;
   margin-block: 10px;
   display: block;
@@ -29,42 +26,31 @@ input {
   outline: none;
   border: none;
   border-radius: 4px;
-  background-color: #ddd;
-}
-
-.display {
-  font-family: monospace;
-}
-
-.copy-btn {
-  font-size: 1rem;
-  display: block;
-  /* background-color: red; */
   width: 100%;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  /* border: 2px solid black; */
-  background-color: #ddd;
-  font-weight: bold;
-}
-
-.copy-btn:hover {
-  cursor: pointer;
-}
-
-.copy-btn:hover {
-  background-color: #bbb;
-}
-
-.copy-btn:active {
-  background-color: white;
 }
 
 svg {
   width: 1em;
   height: 1em;
 }
+
+/* Colors */
+
+input,
+button {
+  background-color: #ddd;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #bbb;
+}
+
+button:active {
+  background-color: white;
+}
+
+/* Darkmode Automatic */
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -81,7 +67,7 @@ svg {
   input::placeholder {
     color: #ccc;
   }
-  .copy-btn {
+  button {
     background-color: #fcfcfc;
   }
 }
