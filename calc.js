@@ -15,7 +15,7 @@ expressionInput.addEventListener("input", () => {
   ParseExpression(expressionInput.value);
 });
 copyBtn.addEventListener("click", () => {
-  navigator.clipboard.writeText(solution);
+  navigator.clipboard.writeText(customRound(solution));
 });
 
 function ParseExpression(inputString) {
