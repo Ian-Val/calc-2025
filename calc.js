@@ -23,10 +23,16 @@ function ParseExpression(inputString) {
   tokensPostFix = InfixToPostfix(tokens);
   solution = Number(EvaluatePostFix(tokensPostFix));
   resultDisplay.textContent =
-    expressionInput.value.trim() === "" || isNaN(solution) ? "" : `${solution}`;
+    expressionInput.value.trim() === "" || isNaN(solution)
+      ? ""
+      : `${customRound(solution)}`;
   if (solution === 0) {
     resultDisplay.textContent = "0";
   }
+}
+
+function customRound(input) {
+  return Math.round(input * 1000) / 1000;
 }
 
 // On Load
